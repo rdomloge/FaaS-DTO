@@ -20,6 +20,10 @@ public class JobRequest {
 		this.responseRoutingKey = responseRoutingKey;
 		this.correlationId = correlationId;
 	}
+	
+	public JobRequest() {
+		
+	}
 
 	public String getFunctionName() {
 		return functionName;
