@@ -4,14 +4,17 @@ public class JobResponse {
 	
 	private JobRequest jobRequest;
 	
-	private String jsonResponse;
-
-	public JobResponse(JobRequest jobRequest, String jsonResponse) {
-		super();
-		this.jobRequest = jobRequest;
-		this.jsonResponse = jsonResponse;
-	}
+	private Object payload;
 	
+	private Outcome outcome;
+
+	
+	public JobResponse(JobRequest jobRequest, Object payload, Outcome outcome) {
+		this.jobRequest = jobRequest;
+		this.payload = payload;
+		this.outcome = outcome;
+	}
+
 	public JobResponse() {
 
 	}
@@ -20,8 +23,11 @@ public class JobResponse {
 		return jobRequest;
 	}
 
-	public String getJsonResponse() {
-		return jsonResponse;
+	public Object getPayload() {
+		return payload;
 	}
-	
+
+	public Outcome getOutcome() {
+		return outcome;
+	}
 }
