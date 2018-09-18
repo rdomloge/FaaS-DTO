@@ -1,19 +1,20 @@
 package com.example.faas.dto;
 
 import java.util.Map;
+import java.util.Properties;
 
 public class JobRequest {
 
 	private String functionName;
 	
-	private Map<String, String> params;
+	private Properties params;
 	
 	private String responseRoutingKey;
 	
 	private String correlationId;
 
 	
-	public JobRequest(String functionName, Map<String, String> params, String responseRoutingKey,
+	public JobRequest(String functionName, Properties params, String responseRoutingKey,
 			String correlationId) {
 		this.functionName = functionName;
 		this.params = params;
@@ -29,7 +30,7 @@ public class JobRequest {
 		return functionName;
 	}
 
-	public Map<String, String> getParams() {
+	public Properties getParams() {
 		return params;
 	}
 
